@@ -51,7 +51,7 @@ describe('resolveLinuxPtyLaunch', () => {
     if (process.platform !== 'linux') return;
     expect(resolveLinuxPtyLaunch('/bin/zsh', ['-l'])).toEqual({
       executable: expect.stringMatching(/\/env$/),
-      args: ['-u', 'ARGV0', '/bin/zsh', '-l'],
+      args: ['-u', 'ARGV0', '-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', '/bin/zsh', '-l'],
     });
   });
 
