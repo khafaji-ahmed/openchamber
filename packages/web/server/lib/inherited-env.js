@@ -69,6 +69,6 @@ export function resolveLinuxPtyLaunch(executable, args = []) {
   }
   return {
     executable: envBinary,
-    args: ['-u', 'ARGV0', executable, ...args],
+    args: ['-u', 'ARGV0', '-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', executable, ...args],
   };
 }
