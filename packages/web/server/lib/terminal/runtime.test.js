@@ -164,6 +164,9 @@ describe('terminal runtime', () => {
       if (process.platform === 'linux') {
         expect(harness.processes[0].shell).toMatch(/\/env$/);
         expect(harness.processes[0].args.slice(0, 7)).toEqual(['-u', 'ARGV0', '-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', expect.any(String)]);
+      } else if (process.platform === 'darwin') {
+        expect(harness.processes[0].shell).toMatch(/\/env$/);
+        expect(harness.processes[0].args.slice(0, 5)).toEqual(['-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', expect.any(String)]);
       }
       harness.processes[0].emitData('\u001b[?2031h\u001b]10;?\u0007\u001b]11;?\u0007\u001b[0c');
       expect(harness.processes[0].writes).toEqual(['\u001b]10;rgb:1b1b/1b1b/1b1b\u001b\\', '\u001b]11;rgb:fafa/f8f8/f0f0\u001b\\', '\u001b[?1;2c']);
@@ -265,6 +268,9 @@ describe('terminal runtime', () => {
       if (process.platform === 'linux') {
         expect(harness.processes[0].shell).toMatch(/\/env$/);
         expect(harness.processes[0].args).toEqual(['-u', 'ARGV0', '-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', '/bin/zsh', '-l']);
+      } else if (process.platform === 'darwin') {
+        expect(harness.processes[0].shell).toMatch(/\/env$/);
+        expect(harness.processes[0].args).toEqual(['-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', '/bin/zsh', '-l']);
       } else {
         expect(harness.processes[0].shell).toBe('/bin/zsh');
         expect(harness.processes[0].args).toEqual(['-l']);
@@ -276,6 +282,9 @@ describe('terminal runtime', () => {
       if (process.platform === 'linux') {
         expect(harness.processes[1].shell).toMatch(/\/env$/);
         expect(harness.processes[1].args).toEqual(['-u', 'ARGV0', '-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', '/bin/bash', '-l']);
+      } else if (process.platform === 'darwin') {
+        expect(harness.processes[1].shell).toMatch(/\/env$/);
+        expect(harness.processes[1].args).toEqual(['-u', 'NODE_CHANNEL_FD', '-u', 'BUN_WATCH_PID', '/bin/bash', '-l']);
       } else {
         expect(harness.processes[1].shell).toBe('/bin/bash');
         expect(harness.processes[1].args).toEqual(['-l']);
