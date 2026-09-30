@@ -86,7 +86,7 @@ export const MobileQrScannerOverlay: React.FC<{ onCancel: () => void }> = ({ onC
         </p>
       </div>
       <Button type="button" variant="outline" size="lg" className="mx-auto min-h-12 w-full max-w-sm bg-background" onClick={onCancel}>
-        <Icon name="close" className="size-[18px]" />
+        <Icon name="close" className="size-4.5" />
         {t('mobile.instances.cancelEdit')}
       </Button>
     </div>,
@@ -100,7 +100,7 @@ export const MobileQrConnectionLoading: React.FC = () => {
     <div role="status" className="fixed inset-0 z-[1000] flex flex-col items-center justify-center gap-5 bg-background px-6 text-foreground">
       <OpenChamberLogo width={96} height={96} isAnimated />
       <div className="flex items-center gap-2 typography-ui-label text-muted-foreground">
-        <Icon name="loader-4" className="size-[18px] animate-spin" />
+        <Icon name="loader-4" className="size-4.5 animate-spin" />
         <span>{t('mobile.connect.connecting')}</span>
       </div>
     </div>,

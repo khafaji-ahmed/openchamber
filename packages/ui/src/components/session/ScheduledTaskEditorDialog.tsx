@@ -1693,9 +1693,9 @@ export function ScheduledTaskEditorDialog(props: {
               aria-label={t('sessions.scheduledTasks.editor.permissionAutoAccept.aria')}
             >
               {draft.execution.permissionAutoAccept ? (
-                <Icon name="shield-check" className="h-[18px] w-[18px]" style={{ color: 'var(--status-info)' }} aria-hidden="true" />
+                <Icon name="shield-check" className="size-4.5" style={{ color: 'var(--status-info)' }} aria-hidden="true" />
               ) : (
-                <Icon name="shield-user" className="h-[18px] w-[18px]" aria-hidden="true" />
+                <Icon name="shield-user" className="size-4.5" aria-hidden="true" />
               )}
             </button>
           </TooltipTrigger>
@@ -1714,9 +1714,9 @@ export function ScheduledTaskEditorDialog(props: {
               aria-label={t('sessions.scheduledTasks.editor.goal.aria')}
             >
               {draft.execution.goalEnabled ? (
-                <Icon name="target-fill" className="h-[18px] w-[18px] text-current" aria-hidden="true" />
+                <Icon name="target-fill" className="size-4.5 text-current" aria-hidden="true" />
               ) : (
-                <Icon name="target" className="h-[18px] w-[18px] text-current" aria-hidden="true" />
+                <Icon name="target" className="size-4.5 text-current" aria-hidden="true" />
               )}
             </button>
           </TooltipTrigger>

@@ -37,7 +37,7 @@ export const MobileConnectionDebugPanel: React.FC<{ onClose: () => void }> = ({ 
             {copied ? t('mobile.connectionDebug.copied') : t('mobile.connectionDebug.copy')}
           </Button>
           <Button type="button" variant="ghost" size="icon" aria-label={t('mobile.connectionDebug.close')} onClick={onClose}>
-            <Icon name="close" className="size-[18px]" />
+            <Icon name="close" className="size-4.5" />
           </Button>
         </div>
       </div>

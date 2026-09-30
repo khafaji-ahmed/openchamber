@@ -427,7 +427,7 @@ function RunOverviewContent({ runKey }: { runKey: string }): React.ReactNode {
                 aria-label={t('header.mainSurface.backToChat')}
                 onClick={() => useUIStore.getState().closeMainSurfaces()}
               >
-                <Icon name="arrow-left" className="size-[18px]" />
+                <Icon name="arrow-left" className="size-4.5" />
               </Button>
             ) : null}
             <div className="min-w-0 flex-1">

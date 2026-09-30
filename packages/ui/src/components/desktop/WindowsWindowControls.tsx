@@ -21,14 +21,14 @@ const TRAFFIC_LIGHT_GLYPH = 'rgba(0, 0, 0, 0.7)';
 
 const TrafficLightGlyph: React.FC<{ action: DesktopWindowControlAction }> = ({ action }) => {
   if (action === 'close') {
-    return <Icon name="close" className="size-[10px]" />;
+    return <Icon name="close" className="size-2.5" />;
   }
   if (action === 'minimize') {
-    return <Icon name="subtract" className="size-[10px]" />;
+    return <Icon name="subtract" className="size-2.5" />;
   }
   // Green maximize/restore: same `add` (+) glyph for both states. The label
   // (restore vs maximize) still flips via isMaximized in TrafficLightButton.
-  return <Icon name="add" className="size-[10px]" />;
+  return <Icon name="add" className="size-2.5" />;
 };
 
 type TrafficLightButtonProps = {

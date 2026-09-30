@@ -57,7 +57,7 @@ const ContextProgressIcon: React.FC<{ percentage: number | null }> = ({ percenta
   return (
     <svg
       viewBox={`0 0 ${size} ${size}`}
-      className="size-[18px] -rotate-90"
+      className="size-4.5 -rotate-90"
       role="progressbar"
       aria-valuenow={percentage === null ? undefined : Math.round(progressPct)}
       aria-valuemin={0}
@@ -97,7 +97,7 @@ const MetadataRow: React.FC<{
 }> = ({ icon, iconNode, label, children }) => (
   <div className="flex min-w-0 items-center gap-3 rounded-xl px-2.5 py-2.5">
     <span className="flex size-5 shrink-0 items-center justify-center text-muted-foreground">
-      {iconNode ?? (icon ? <Icon name={icon} className="size-[18px]" /> : null)}
+      {iconNode ?? (icon ? <Icon name={icon} className="size-4.5" /> : null)}
     </span>
     <span className="shrink-0 typography-ui-label text-muted-foreground">{label}</span>
     <span className="min-w-0 flex-1 truncate text-right typography-ui-label font-medium text-foreground">
@@ -300,7 +300,7 @@ const MobileUsageLimits: React.FC<{
     <div className="pt-2.5">
       <div className="flex min-w-0 items-center gap-3 px-2.5 pb-1.5">
         <span className="flex size-5 shrink-0 items-center justify-center text-muted-foreground">
-          <Icon name="timer" className="size-[18px]" />
+          <Icon name="timer" className="size-4.5" />
         </span>
         <span className="shrink-0 typography-ui-label text-muted-foreground">
           {t('mobile.header.metadata.usage')}

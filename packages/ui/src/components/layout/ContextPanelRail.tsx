@@ -116,12 +116,12 @@ const ContextPanelRailItem: React.FC<RailItemProps> = ({
             )}
           >
             {surface.id === 'diff' ? (
-              <DiffViewIcon className="h-[18px] w-[18px]" />
+              <DiffViewIcon className="size-4.5" />
             ) : (
               <GuestIcon
                 icon={surface.icon}
                 iconSrc={surface.iconSrc}
-                className="h-[18px] w-[18px]"
+                className="size-4.5"
               />
             )}
             {showOrderNumber && orderNumber != null ? (
@@ -399,7 +399,7 @@ export const ContextPanelRail: React.FC = () => {
             onClick={() => setIsSurfacesDialogOpen(true)}
             className="flex h-9 w-9 items-center justify-center rounded-md text-muted-foreground/70 transition-colors hover:text-foreground"
           >
-            <Icon name="equalizer-2" className="h-[18px] w-[18px]" />
+            <Icon name="equalizer-2" className="size-4.5" />
           </button>
         </TooltipTrigger>
         <TooltipContent side="left" sideOffset={8}>

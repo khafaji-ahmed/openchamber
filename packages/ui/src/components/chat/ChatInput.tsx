@@ -3775,7 +3775,7 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({
     const buttonSizeClass = isMobile ? 'h-8 w-8' : (isVSCode ? 'h-5 w-5' : 'h-6 w-6');
     const sendIconSizeClass = isMobile ? 'h-4 w-4' : (isVSCode ? 'h-3.5 w-3.5' : 'h-4 w-4');
     const stopIconSizeClass = isMobile ? 'h-6 w-6' : (isVSCode ? 'h-4 w-4' : 'h-5 w-5');
-    const iconSizeClass = isMobile ? 'h-[18px] w-[18px]' : (isVSCode ? 'h-4 w-4' : 'h-[18px] w-[18px]');
+    const iconSizeClass = isMobile ? 'size-4.5' : (isVSCode ? 'h-4 w-4' : 'size-4.5');
 
     const iconButtonBaseClass = 'flex cursor-pointer items-center justify-center text-foreground transition-none outline-none focus:outline-none flex-shrink-0 disabled:cursor-not-allowed';
     const footerIconButtonClass = cn(iconButtonBaseClass, buttonSizeClass);
@@ -4377,7 +4377,7 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({
                             requestAnimationFrame(handlePickLocalFiles);
                         }}
                     >
-                        <Icon name="attachment-2" className="h-[18px] w-[18px] flex-shrink-0 text-muted-foreground" />
+                        <Icon name="attachment-2" className="size-4.5 flex-shrink-0 text-muted-foreground" />
                         {t('chat.chatInput.actions.attachFiles')}
                     </button>
                     <button
@@ -4391,7 +4391,7 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({
                             requestAnimationFrame(openGitHubPicker);
                         }}
                     >
-                        <Icon name={repositoryProvider === 'gitlab' ? 'gitlab' : 'github'} className="h-[18px] w-[18px] flex-shrink-0 text-muted-foreground" />
+                        <Icon name={repositoryProvider === 'gitlab' ? 'gitlab' : 'github'} className="size-4.5 flex-shrink-0 text-muted-foreground" />
                         {t(repositoryProvider === 'gitlab' ? 'chat.chatInput.actions.linkGitlab' : 'chat.chatInput.actions.linkGithub')}
                     </button>
                     {showLinearPicker ? (
@@ -4404,7 +4404,7 @@ const ChatInputComponent: React.FC<ChatInputProps> = ({
                                 requestAnimationFrame(openLinearPicker);
                             }}
                         >
-                            <Icon name="linear" className="h-[18px] w-[18px] flex-shrink-0 text-muted-foreground" />
+                            <Icon name="linear" className="size-4.5 flex-shrink-0 text-muted-foreground" />
                             {t('chat.chatInput.actions.linkLinearIssue')}
                         </button>
                     ) : null}
