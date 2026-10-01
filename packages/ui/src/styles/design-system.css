@@ -1,4 +1,12 @@
 @layer base {
+  /* Tailwind's h-/w-/size-* utilities read --padding-scale. That preference
+     should tune layout density, not shrink glyphs relative to rem-sized text.
+     Reset it on sprite SVGs so their size classes track Interface Font Size. */
+  svg.remixicon {
+    --padding-scale: 1;
+    flex-shrink: 0;
+  }
+
   :root {
     color-scheme: light;
     -webkit-font-smoothing: antialiased;
