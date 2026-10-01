@@ -24,7 +24,7 @@ const FileAttachmentButton = memo(() => {
   const runtimeApis = useRuntimeAPIs();
   const isVSCodeRuntime = runtimeApis.runtime.isVSCode;
   const buttonSizeClass = isMobile ? 'h-9 w-9' : 'h-7 w-7';
-  const iconSizeClass = isMobile ? 'h-5 w-5' : 'h-[18px] w-[18px]';
+  const iconSizeClass = 'size-4';
 
   const attachFiles = async (files: FileList | File[]) => {
     for (let i = 0; i < files.length; i++) {

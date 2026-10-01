@@ -159,7 +159,7 @@ export const MobileInstancesSurface: React.FC<{
           <div className="flex flex-col gap-3">
             <div className="flex items-center gap-3 rounded-[18px] border border-border/70 bg-surface-elevated px-3.5 py-3">
               <span className="flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-interactive-hover text-foreground">
-                <Icon name="lock" className="size-4.5" />
+                <Icon name="lock" className="size-4" />
               </span>
               <div className="min-w-0">
                 <p className="truncate typography-ui-label text-foreground">{pendingConnection.label}</p>
@@ -232,7 +232,7 @@ export const MobileInstancesSurface: React.FC<{
                       disabled={(isBusy && !isConnectingRow) || confirming}
                     >
                       <span className="relative flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-interactive-hover text-foreground">
-                        <Icon name="server" className="size-4.5" />
+                        <Icon name="server" className="size-4" />
                         {isActive ? (
                           <span className="absolute -right-0.5 -top-0.5 size-2.5 rounded-full border-2 border-[var(--surface-elevated)] bg-[var(--status-success)]" aria-hidden />
                         ) : null}
@@ -257,7 +257,7 @@ export const MobileInstancesSurface: React.FC<{
                           onClick={() => confirmDelete(connection.id)}
                           style={{ touchAction: 'manipulation' }}
                         >
-                          <Icon name="delete-bin" className="size-4.5" />
+                          <Icon name="delete-bin" className="size-4" />
                           <span className="typography-ui-label">{t('mobile.instances.delete')}</span>
                         </button>
                       ) : !connection.candidates.some((c) => c.kind === 'direct') ? null : (
@@ -274,7 +274,7 @@ export const MobileInstancesSurface: React.FC<{
                           }}
                           style={{ touchAction: 'manipulation' }}
                         >
-                          <Icon name="edit" className="size-4.5" />
+                          <Icon name="edit" className="size-4" />
                         </button>
                       )}
                       <button
@@ -286,7 +286,7 @@ export const MobileInstancesSurface: React.FC<{
                         onClick={() => toggleConfirmDelete(connection.id)}
                         style={{ touchAction: 'manipulation' }}
                       >
-                        <Icon name={confirming ? 'close' : 'delete-bin'} className="size-4.5" />
+                        <Icon name={confirming ? 'close' : 'delete-bin'} className="size-4" />
                       </button>
                     </div>
                   </div>
@@ -311,7 +311,7 @@ export const MobileInstancesSurface: React.FC<{
                   onClick={() => void handleScanInstance()}
                   disabled={isScanning}
                 >
-                  <Icon name="scan-2" className={cn('size-4.5', isScanning && 'animate-pulse')} />
+                  <Icon name="scan-2" className={cn('size-4', isScanning && 'animate-pulse')} />
                   {t('mobile.connect.scanQr')}
                 </Button>
               ) : null}
@@ -322,7 +322,7 @@ export const MobileInstancesSurface: React.FC<{
                 className="h-12 w-full"
                 onClick={() => { setError(null); setFormOpen(true); }}
               >
-                <Icon name="add" className="size-4.5" />
+                <Icon name="add" className="size-4" />
                 {t('mobile.instances.addManual')}
               </Button>
               {error ? <p className="px-1 text-center typography-small text-[var(--status-error)]">{error}</p> : null}

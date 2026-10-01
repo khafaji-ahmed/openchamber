@@ -68,7 +68,7 @@ const ProjectHeaderIdentity: React.FC<ProjectHeaderIdentityProps> = ({
             'h-3.5 w-3.5 items-center justify-center text-muted-foreground',
             alwaysShowActions ? 'inline-flex' : 'absolute inset-0 inline-flex opacity-0 transition-opacity group-hover/project:opacity-100 group-focus-within/project:opacity-100',
           )}>
-            <Icon name={isCollapsed ? 'arrow-right-s' : 'arrow-down-s'} className="h-3.5 w-3.5" />
+            <Icon name={isCollapsed ? 'arrow-right-s' : 'arrow-down-s'} className="h-4 w-4" />
           </span>
         ) : null}
         {projectIconImage ? (
@@ -88,16 +88,16 @@ const ProjectHeaderIdentity: React.FC<ProjectHeaderIdentityProps> = ({
               }}
               className="h-full w-full object-contain"
               fallback={projectIconName ? (
-                <Icon name={projectIconName} className="h-3.5 w-3.5" style={iconColor ? { color: iconColor } : undefined} />
+                <Icon name={projectIconName} className="h-4 w-4" style={iconColor ? { color: iconColor } : undefined} />
               ) : (
-                <Icon name="folder" className="h-3.5 w-3.5 text-muted-foreground/80" style={iconColor ? { color: iconColor } : undefined} />
+                <Icon name="folder" className="h-4 w-4 text-muted-foreground/80" style={iconColor ? { color: iconColor } : undefined} />
               )}
             />
           </span>
         ) : projectIconName ? (
-          <Icon name={projectIconName} className={cn('h-3.5 w-3.5', iconVisibilityClassName)} style={iconColor ? { color: iconColor } : undefined} />
+          <Icon name={projectIconName} className={cn('h-4 w-4', iconVisibilityClassName)} style={iconColor ? { color: iconColor } : undefined} />
         ) : (
-          <Icon name="folder" className={cn('h-3.5 w-3.5 text-muted-foreground/80', iconVisibilityClassName)} style={iconColor ? { color: iconColor } : undefined} />
+          <Icon name="folder" className={cn('h-4 w-4 text-muted-foreground/80', iconVisibilityClassName)} style={iconColor ? { color: iconColor } : undefined} />
         )}
       </span>
       <span className={cn('truncate typography-ui-label font-semibold lowercase text-foreground', labelClassName)}>{projectLabel}</span>

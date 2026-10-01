@@ -404,7 +404,7 @@ const SessionRow: React.FC<{
               state={turnActivity ?? 'unread'}
             />
           ) : (
-            <RiArrowDownSLine className={cn('size-4.5 transition-transform duration-150', expanded ? 'rotate-0' : '-rotate-90')} />
+            <RiArrowDownSLine className={cn('size-4 transition-transform duration-150', expanded ? 'rotate-0' : '-rotate-90')} />
           )}
         </button>
       ) : null}
@@ -2145,7 +2145,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                             }}
                             style={{ touchAction: 'manipulation' }}
                           >
-                            <RiDeleteBinLine className="size-4.5" />
+                            <RiDeleteBinLine className="size-4" />
                           </button>
                           <button
                             type="button"
@@ -2158,7 +2158,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                             }}
                             style={{ touchAction: 'manipulation' }}
                           >
-                            <RiEdit2Line className="size-4.5" />
+                            <RiEdit2Line className="size-4" />
                           </button>
                         </>
                       )}
@@ -2236,7 +2236,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                                           }}
                                           style={{ touchAction: 'manipulation' }}
                                         >
-                                          <Icon name="key" className="size-4.5" />
+                                          <Icon name="key" className="size-4" />
                                         </button>
                                         <button
                                           type="button"
@@ -2249,7 +2249,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                                           }}
                                           style={{ touchAction: 'manipulation' }}
                                         >
-                                          <Icon name="more-2" className="size-4.5" />
+                                          <Icon name="more-2" className="size-4" />
                                         </button>
                                         </>
                                       ) : bucket.worktree && !removing ? (
@@ -2266,7 +2266,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                                           }}
                                           style={{ touchAction: 'manipulation' }}
                                         >
-                                          <RiDeleteBinLine className="size-4.5" />
+                                          <RiDeleteBinLine className="size-4" />
                                         </button>
                                       ) : null}
                                     >
@@ -2360,7 +2360,7 @@ export const MobileSessionsSheet: React.FC<MobileSessionsSheetProps> = ({ open, 
                 aria-label={t('mobile.menu.instances')}
                 style={{ touchAction: 'manipulation' }}
               >
-                <Icon name="server" className="size-4.5" />
+                <Icon name="server" className="size-4" />
                 <span className="block min-w-0 truncate">{footer.instanceLabel}</span>
               </Button>
             ) : (

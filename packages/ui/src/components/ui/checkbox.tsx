@@ -24,8 +24,8 @@ export const Checkbox = React.memo<CheckboxProps>(function Checkbox({
   className,
   iconClassName,
 }) {
-  const boxSize = 'h-[14px] w-[14px] min-h-[14px] min-w-[14px]';
-  const iconSize = 'h-[10px] w-[10px] min-h-[10px] min-w-[10px]';
+  const boxSize = 'size-[0.875rem] min-h-[0.875rem] min-w-[0.875rem]';
+  const iconSize = 'size-[0.625rem]';
   const isOn = checked || indeterminate;
   // The checkbox owns its own toggle. Clicks stop at this wrapper so a
   // clickable parent row does not toggle the same value again; the wrapper

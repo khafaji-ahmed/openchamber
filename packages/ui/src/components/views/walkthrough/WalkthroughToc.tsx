@@ -58,7 +58,7 @@ const TocStop = ({
             className={cn(
               // A pill rather than a fixed circle: two-digit steps were cramped
               // and visibly off-centre in a square.
-              'typography-micro flex h-4 min-w-4 shrink-0 items-center justify-center rounded-full px-1 tabular-nums',
+              'typography-micro flex h-[1rem] min-w-[1rem] shrink-0 items-center justify-center rounded-full px-1 tabular-nums',
               isActive
                 ? 'bg-interactive-selection-foreground/20'
                 : isVisited
@@ -66,7 +66,7 @@ const TocStop = ({
                   : 'bg-surface-muted text-muted-foreground'
             )}
           >
-            {isVisited && !isActive ? <Icon name="check" className="size-2.5" /> : stopView.position}
+            {isVisited && !isActive ? <Icon name="check" className="size-3" /> : stopView.position}
           </span>
           <span className="typography-meta truncate font-medium">{stopView.stop.title}</span>
           {stopView.isStale && (

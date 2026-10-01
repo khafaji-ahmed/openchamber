@@ -168,7 +168,7 @@ export const MobileSessionRowActions: React.FC<{
         onClick={onArchive}
         style={{ touchAction: 'manipulation' }}
       >
-        <RiArchiveLine className="size-4.5" />
+        <RiArchiveLine className="size-4" />
       </button>
       {pin ? (
         <button
@@ -179,7 +179,7 @@ export const MobileSessionRowActions: React.FC<{
           onClick={() => { pin.onToggle(); onRevealedChange?.(false); }}
           style={{ touchAction: 'manipulation' }}
         >
-          <Icon name={pin.pinned ? 'unpin' : 'pushpin'} className="size-4.5" />
+          <Icon name={pin.pinned ? 'unpin' : 'pushpin'} className="size-4" />
         </button>
       ) : null}
       {work ? (
@@ -194,8 +194,7 @@ export const MobileSessionRowActions: React.FC<{
           onClick={() => { work.onToggle(); onRevealedChange?.(false); }}
           style={{ touchAction: 'manipulation' }}
         >
-          {/* The check glyph draws smaller than the others at the same box. */}
-          <Icon name={work.inWork ? 'check' : 'eye'} className={work.inWork ? 'size-5' : 'size-4.5'} />
+          <Icon name={work.inWork ? 'check' : 'eye'} className="size-4" />
         </button>
       ) : null}
       <button
@@ -213,7 +212,7 @@ export const MobileSessionRowActions: React.FC<{
         onClick={confirmingDelete ? onConfirmDelete : onRequestDelete}
         style={{ touchAction: 'manipulation' }}
       >
-        <RiDeleteBinLine className="size-4.5" />
+        <RiDeleteBinLine className="size-4" />
       </button>
       <button
         type="button"
@@ -223,7 +222,7 @@ export const MobileSessionRowActions: React.FC<{
         onClick={onRequestRename}
         style={{ touchAction: 'manipulation' }}
       >
-        <RiEdit2Line className="size-4.5" />
+        <RiEdit2Line className="size-4" />
       </button>
       <button
         type="button"
@@ -233,7 +232,7 @@ export const MobileSessionRowActions: React.FC<{
         onClick={() => { void handleCopySessionId(); }}
         style={{ touchAction: 'manipulation' }}
       >
-        <Icon name="file-copy" className="size-4.5" />
+        <Icon name="file-copy" className="size-4" />
       </button>
     </>
   );

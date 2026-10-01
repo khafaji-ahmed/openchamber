@@ -245,7 +245,7 @@ const MiniChatHeader: React.FC<{ mode: MiniChatMode }> = ({ mode }) => {
           valueClassName="font-semibold leading-none"
           hideIcon
           showPercentIcon
-          percentIconClassName="h-4.5 w-4.5"
+          percentIconClassName="h-4 w-4"
         />
       ) : null}
       <Button

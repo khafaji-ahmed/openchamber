@@ -985,8 +985,8 @@ export const SettingsView: React.FC<SettingsViewProps> = ({ onClose, forceMobile
                             )}
                           >
                             {page.slug === 'mcp'
-                              ? <McpIcon className="size-4.5 shrink-0 sm:size-4" />
-                              : <Icon name={iconName!} className="size-4.5 shrink-0 sm:size-4" />}
+                              ? <McpIcon className="size-4 shrink-0 sm:size-4" />
+                              : <Icon name={iconName!} className="size-4 shrink-0 sm:size-4" />}
                             <span className="flex items-center gap-1.5 whitespace-nowrap overflow-hidden transition-opacity duration-150 opacity-100">
                               <span className="typography-ui-label font-normal truncate">{getPageTitle(page.slug)}</span>
                               {page.slug === 'tunnel' && (

@@ -107,10 +107,10 @@ const SortableChip: React.FC<{
                     onClick={(e) => { e.stopPropagation(); onToggleShared(); }}
                     aria-label={t(item.shared ? 'chat.draftStarters.makePersonal' : 'chat.draftStarters.share')}
                     title={t(item.shared ? 'chat.draftStarters.makePersonal' : 'chat.draftStarters.share')}
-                    className="absolute -left-1.5 -top-1.5 hidden h-4 w-4 items-center justify-center rounded-full border text-muted-foreground shadow-sm hover:text-foreground group-hover/chip:flex"
+                    className="absolute -left-1.5 -top-1.5 hidden size-[1rem] items-center justify-center rounded-full border text-muted-foreground shadow-sm hover:text-foreground group-hover/chip:flex"
                     style={chipStyle}
                 >
-                    <Icon name={item.shared ? 'user' : 'team'} className="h-2.5 w-2.5" />
+                    <Icon name={item.shared ? 'user' : 'team'} className="h-3 w-3" />
                 </button>
             ) : null}
             {/* A shared starter is the team's: it leaves only through the repo file. */}
@@ -120,10 +120,10 @@ const SortableChip: React.FC<{
                     onClick={(e) => { e.stopPropagation(); onRemove(); }}
                     aria-label={t('chat.draftStarters.remove')}
                     title={t('chat.draftStarters.remove')}
-                    className="absolute -right-1.5 -top-1.5 hidden h-4 w-4 items-center justify-center rounded-full border text-muted-foreground shadow-sm hover:text-foreground group-hover/chip:flex"
+                    className="absolute -right-1.5 -top-1.5 hidden size-[1rem] items-center justify-center rounded-full border text-muted-foreground shadow-sm hover:text-foreground group-hover/chip:flex"
                     style={chipStyle}
                 >
-                    <Icon name="close" className="h-2.5 w-2.5" />
+                    <Icon name="close" className="h-3 w-3" />
                 </button>
             )}
         </div>

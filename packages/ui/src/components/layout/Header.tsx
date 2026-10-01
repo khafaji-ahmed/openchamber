@@ -127,7 +127,7 @@ const HeaderIconActionButton = React.memo(function HeaderIconActionButton({
             pressed && 'bg-interactive-selection text-interactive-selection-foreground'
           )}
         >
-          <Icon name={iconName} className={iconClassName ?? 'size-4.5'} />
+          <Icon name={iconName} className={iconClassName ?? 'size-4'} />
         </button>
       </TooltipTrigger>
       <TooltipContent>
@@ -188,7 +188,7 @@ const DesktopServicesMenu = React.memo(function DesktopServicesMenu({
                 isDesktopApp ? 'w-auto max-w-[20rem] justify-start gap-1.5 px-2.5' : 'h-8 w-8'
               )}
             >
-              <Icon name="server" className="size-4.5" />
+              <Icon name="server" className="size-4" />
               {isDesktopApp ? (
                 <span className="truncate typography-ui-label font-medium text-foreground">{currentInstanceLabel}</span>
               ) : null}
@@ -1282,8 +1282,8 @@ export const Header: React.FC = () => {
           className="mr-2"
         />
       ) : null}
-      <SpaceApplyButton directory={openDirectory} className={cn(DESKTOP_HEADER_ICON_BUTTON_CLASS, 'mr-1 text-muted-foreground hover:text-foreground')} iconClassName="size-4.5" />
-      <SpaceAccessButton directory={openDirectory} className={cn(DESKTOP_HEADER_ICON_BUTTON_CLASS, 'mr-1 text-muted-foreground hover:text-foreground')} iconClassName="size-4.5" />
+      <SpaceApplyButton directory={openDirectory} className={cn(DESKTOP_HEADER_ICON_BUTTON_CLASS, 'mr-1 text-muted-foreground hover:text-foreground')} iconClassName="size-4" />
+      <SpaceAccessButton directory={openDirectory} className={cn(DESKTOP_HEADER_ICON_BUTTON_CLASS, 'mr-1 text-muted-foreground hover:text-foreground')} iconClassName="size-4" />
       <OpenInAppButton directory={actionDirectory} className="mr-1" />
       {/* Instances only exist in the desktop app. On web the menu was left
           holding a single dev-only shutdown action, which is not a reason to
@@ -1414,7 +1414,7 @@ export const Header: React.FC = () => {
                 aria-label={t('header.mainSurface.backToChat')}
                 onClick={() => useUIStore.getState().closeMainSurfaces()}
               >
-                <Icon name="arrow-left" className="size-4.5" />
+                <Icon name="arrow-left" className="size-4" />
               </Button>
             </TooltipTrigger>
             <TooltipContent side="bottom">{t('header.mainSurface.backToChat')}</TooltipContent>
@@ -1440,7 +1440,7 @@ export const Header: React.FC = () => {
                   className={desktopHeaderIconButtonClass}
                   aria-label={t('sessions.switcher.openAria')}
                 >
-                  <Icon name="history" className="size-4.5" />
+                  <Icon name="history" className="size-4" />
                 </button>
               </SessionSwitcherDropdown>
             ) : null}
@@ -1515,7 +1515,7 @@ export const Header: React.FC = () => {
               ) : null}
             </div>
             <div className={cn(
-              'flex h-[18px] shrink-0 items-center justify-center',
+              'flex h-4 shrink-0 items-center justify-center',
               // Top-aligned only when the title has a metadata line under it;
               // alone, the title is centred and the button must follow.
               showHeaderMetaRow ? 'self-start' : 'self-center',
@@ -1532,7 +1532,7 @@ export const Header: React.FC = () => {
                   }}
                 >
                   <DropdownMenuTrigger asChild>
-                    <Button variant="ghost" size="xs" className="h-[18px] w-6 px-0 text-muted-foreground hover:bg-transparent hover:text-foreground" aria-label={t('header.sessionActions.openAria')}>
+                    <Button variant="ghost" size="xs" className="h-4 w-6 px-0 text-muted-foreground hover:bg-transparent hover:text-foreground" aria-label={t('header.sessionActions.openAria')}>
                       <Icon name="more" className="size-4" />
                     </Button>
                   </DropdownMenuTrigger>
@@ -1582,7 +1582,7 @@ export const Header: React.FC = () => {
                   className={desktopHeaderIconButtonClass}
                   aria-label={t('sessions.switcher.openAria')}
                 >
-                  <Icon name="history" className="size-4.5" />
+                  <Icon name="history" className="size-4" />
                 </button>
               </SessionSwitcherDropdown>
             ) : null}
@@ -1658,7 +1658,7 @@ export const Header: React.FC = () => {
               pressed={isContextPanelActive}
               className={!showMiniChatHeaderAction ? 'mr-3.5' : ''}
               valueClassName="typography-ui-label font-medium leading-none text-foreground"
-              percentIconClassName="h-4.5 w-4.5"
+              percentIconClassName="h-4 w-4"
             />
           ) : null}
 
@@ -1689,7 +1689,7 @@ export const Header: React.FC = () => {
                     workStatusToggleActive ? 'text-foreground' : 'text-muted-foreground/50',
                   )}
                 >
-                  <Icon name="list-indefinite" className="size-4.5" />
+                  <Icon name="list-indefinite" className="size-4" />
                 </button>
               </TooltipTrigger>
               <TooltipContent side="bottom">

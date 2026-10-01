@@ -36,7 +36,7 @@ const MOBILE_COMMENT_RADIUS = '1.5rem';
 const MOBILE_COMMENT_MAX_LINES = 6;
 const FOOTER_ICON_BUTTON_CLASS = 'flex h-8 w-8 shrink-0 cursor-pointer items-center justify-center text-foreground outline-none focus:outline-none';
 const FOOTER_PADDING_CLASS = 'px-1.5 py-1.5';
-const ICON_SIZE_CLASS = 'h-[18px] w-[18px]';
+const ICON_SIZE_CLASS = 'size-4';
 const SEND_ICON_SIZE_CLASS = 'h-4 w-4';
 /** Width of the trailing fade on the quote preview. */
 const PREVIEW_FADE_PX = 20;

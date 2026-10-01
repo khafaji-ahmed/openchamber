@@ -1260,7 +1260,7 @@ export const TerminalView: React.FC<TerminalViewProps> = ({ visible, directory, 
                             onClick={handleCreateTab}
                             title={t('terminalView.tabs.newTabTitle')}
                         >
-                            <Icon name="add" className={`${isTouchTerminal ? 'h-[18px] w-[18px]' : 'h-4 w-4'}`}/>
+                            <Icon name="add" className={isTouchTerminal ? 'size-4' : 'size-4'} />
                         </Button>
 
                         <div className="flex shrink-0 items-center gap-1 overflow-visible">

@@ -38,7 +38,7 @@ export function SidebarFooter({
           <Tooltip>
             <TooltipTrigger asChild>
               <button type="button" onClick={onOpenSettings} className={footerButtonClassName} aria-label={t('sessions.sidebar.footer.actions.settings')}>
-                <Icon name="settings-3" className="h-4.5 w-4.5" />
+                <Icon name="settings-3" className="h-4 w-4" />
               </button>
             </TooltipTrigger>
             <TooltipContent side="top" sideOffset={4}><p>{t('sessions.sidebar.footer.actions.settings')}</p></TooltipContent>
@@ -46,7 +46,7 @@ export function SidebarFooter({
           <Tooltip>
             <TooltipTrigger asChild>
               <button type="button" onClick={onOpenUsage} className={footerButtonClassName} aria-label={t('usageStats.openAction')}>
-                <Icon name="bar-chart" className="h-4.5 w-4.5" />
+                <Icon name="bar-chart" className="h-4 w-4" />
               </button>
             </TooltipTrigger>
             <TooltipContent side="top" sideOffset={4}><p>{t('usageStats.openAction')}</p></TooltipContent>
@@ -54,7 +54,7 @@ export function SidebarFooter({
           <Tooltip>
             <TooltipTrigger asChild>
               <button type="button" onClick={onOpenShortcuts} className={footerButtonClassName} aria-label={t('sessions.sidebar.footer.actions.shortcuts')}>
-                <Icon name="command" className="h-4.5 w-4.5" />
+                <Icon name="command" className="h-4 w-4" />
               </button>
             </TooltipTrigger>
             <TooltipContent side="top" sideOffset={4}><p>{t('sessions.sidebar.footer.actions.shortcuts')}</p></TooltipContent>
@@ -62,7 +62,7 @@ export function SidebarFooter({
           <Tooltip>
             <TooltipTrigger asChild>
               <button type="button" onClick={onOpenAbout} className={footerButtonClassName} aria-label={t('sessions.sidebar.footer.actions.aboutOpenChamber')}>
-                <Icon name="information" className="h-4.5 w-4.5" />
+                <Icon name="information" className="h-4 w-4" />
               </button>
             </TooltipTrigger>
             <TooltipContent side="top" sideOffset={4}><p>{t('sessions.sidebar.footer.actions.aboutOpenChamber')}</p></TooltipContent>

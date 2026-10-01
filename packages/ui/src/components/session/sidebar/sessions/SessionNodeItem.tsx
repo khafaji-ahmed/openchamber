@@ -636,7 +636,7 @@ function SessionNodeItemComponent(props: SessionNodeItemProps): React.ReactNode 
       title={t(sessionGoalStatusLabelKey[sessionGoal.status] as never)}
       aria-label={t(sessionGoalStatusLabelKey[sessionGoal.status] as never)}
     >
-      <Icon name="target" className="h-3 w-3" style={{ color: sessionGoalStatusColor[sessionGoal.status] }} />
+      <Icon name="target" className="h-3.5 w-3.5" style={{ color: sessionGoalStatusColor[sessionGoal.status] }} />
     </span>
   ) : null;
   const sessionTitle = resolvedSession.title || t('sessions.sidebar.session.untitled');
@@ -1543,11 +1543,12 @@ function SessionNodeItemComponent(props: SessionNodeItemProps): React.ReactNode 
     void toggleSessionWork();
   };
 
-  // Three-line timeline rows are taller, so their hover actions step up one
-  // size to match the metadata they replace (the pin marker, the dot, the time).
-  const actionButtonSizeClass = alwaysShowActions ? 'h-6 w-6' : isTimelineRow && !isTimelineChatRow ? 'h-5 w-5' : 'h-4 w-4';
-  const actionIconSizeClass = alwaysShowActions ? 'h-3.5 w-3.5' : isTimelineRow && !isTimelineChatRow ? 'h-3 w-3' : 'h-2.5 w-2.5';
-  const checkIconSizeClass = alwaysShowActions ? 'h-4 w-4' : isTimelineRow && !isTimelineChatRow ? 'h-3.5 w-3.5' : 'h-3 w-3';
+  // Keep hover-action targets tied to Interface Font Size, not Padding Density,
+  // so the 14px action glyph cannot outgrow a density-shrunk target. Persistent
+  // actions get a larger 24px target; the glyph itself stays the same size.
+  const actionButtonSizeClass = alwaysShowActions ? 'size-[1.5rem]' : 'size-[1rem]';
+  const actionIconSizeClass = 'h-3.5 w-3.5';
+  const checkIconSizeClass = alwaysShowActions ? 'h-4 w-4' : 'h-3.5 w-3.5';
 
   // The recap of the last turn, for the whole-row tooltip, under the same
   // freshness rule the chat uses.
@@ -1885,7 +1886,7 @@ function SessionNodeItemComponent(props: SessionNodeItemProps): React.ReactNode 
                     </div>
                     {tooltipProjectLabel && !isTimelineRow ? (
                       <div className="flex min-w-0 items-center gap-1.5 text-muted-foreground">
-                        <Icon name="folder" className="h-3 w-3 flex-shrink-0" />
+                        <Icon name="folder" className="h-3.5 w-3.5 flex-shrink-0" />
                         <span className="min-w-0 truncate">{tooltipProjectLabel}</span>
                       </div>
                     ) : null}
@@ -1998,9 +1999,9 @@ function SessionNodeItemComponent(props: SessionNodeItemProps): React.ReactNode 
                     'inline-flex items-center justify-center rounded-md text-muted-foreground hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring transition-opacity',
                     !alwaysShowActions
                       ? (isSessionMenuOpen
-                          ? 'h-4 w-4 opacity-100'
-                          : cn('h-4 w-4 opacity-0', revealOnHoverClass))
-                      : 'h-6 w-6 opacity-100',
+                          ? cn(actionButtonSizeClass, 'opacity-100')
+                          : cn(actionButtonSizeClass, 'opacity-0', revealOnHoverClass))
+                      : cn(actionButtonSizeClass, 'opacity-100'),
                   )}
                   aria-label={t('sessions.sidebar.session.menu.label')}
                   onPointerDown={handleMenuTriggerPointerDown}

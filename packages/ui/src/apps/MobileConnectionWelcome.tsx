@@ -149,7 +149,7 @@ export const MobileConnectionWelcome: React.FC<{
             className="flex w-full items-center gap-3 rounded-[18px] border border-[color-mix(in_srgb,var(--status-warning)_35%,transparent)] bg-[color-mix(in_srgb,var(--status-warning)_10%,transparent)] px-3.5 py-3"
           >
             <span className="flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-[color-mix(in_srgb,var(--status-warning)_16%,transparent)] text-[var(--status-warning)]">
-              <Icon name={notice.kind === 'auth-expired' ? 'lock' : 'cloud-off'} className="size-4.5" />
+              <Icon name={notice.kind === 'auth-expired' ? 'lock' : 'cloud-off'} className="size-4" />
             </span>
             <p className="min-w-0 flex-1 typography-small text-foreground">
               {notice.kind === 'auth-expired'
@@ -163,7 +163,7 @@ export const MobileConnectionWelcome: React.FC<{
           <form className="flex w-full flex-col gap-3" onSubmit={handlePasswordSubmit}>
             <div className="flex items-center gap-3 rounded-[18px] border border-border/70 bg-surface-elevated px-3.5 py-3">
               <span className="flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-interactive-hover text-foreground">
-                <Icon name="lock" className="size-4.5" />
+                <Icon name="lock" className="size-4" />
               </span>
               <div className="min-w-0 text-left">
                 <p className="truncate typography-ui-label text-foreground">{pendingConnection.label}</p>
@@ -208,7 +208,7 @@ export const MobileConnectionWelcome: React.FC<{
                   onClick={() => void handleScanQr()}
                   disabled={isScanning || isBusy}
                 >
-                  <Icon name="scan-2" className={cn('size-4.5', isScanning && 'animate-pulse')} />
+                  <Icon name="scan-2" className={cn('size-4', isScanning && 'animate-pulse')} />
                   {isBusy ? t('mobile.connect.connecting') : t('mobile.connect.scanQr')}
                 </Button>
                 <p className="px-2 text-center typography-small text-muted-foreground">
@@ -240,7 +240,7 @@ export const MobileConnectionWelcome: React.FC<{
                         }}
                       >
                         <span className="flex size-9 shrink-0 items-center justify-center rounded-[12px] bg-interactive-hover text-foreground">
-                          <Icon name="server" className="size-4.5" />
+                          <Icon name="server" className="size-4" />
                         </span>
                         <span className="min-w-0 flex-1">
                           <span className="block truncate typography-ui-label text-foreground">{connection.label}</span>

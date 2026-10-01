@@ -51,10 +51,10 @@ export const SessionSidebarActivityHeader: React.FC<{
       className={cn('group flex w-full items-center gap-1.5 py-1 pl-4 text-left focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/50', chats ? 'pr-10' : 'pr-3.5')}
       aria-expanded={!collapsed}
     >
-      <span className="inline-flex h-3.5 w-3.5 items-center justify-center">
-        <Icon name={ACTIVITY_ICON[activityKey]} className={cn('h-3.5 w-3.5 text-muted-foreground/80', !forceExpanded && 'group-hover:hidden')} />
-        {!forceExpanded ? <span className="hidden h-3.5 w-3.5 items-center justify-center text-muted-foreground group-hover:inline-flex">
-          <Icon name={collapsed ? 'arrow-right-s' : 'arrow-down-s'} className="h-3.5 w-3.5" />
+      <span className="inline-flex size-[1rem] items-center justify-center">
+        <Icon name={ACTIVITY_ICON[activityKey]} className={cn('h-4 w-4 text-muted-foreground/80', !forceExpanded && 'group-hover:hidden')} />
+        {!forceExpanded ? <span className="hidden h-4 w-4 items-center justify-center text-muted-foreground group-hover:inline-flex">
+          <Icon name={collapsed ? 'arrow-right-s' : 'arrow-down-s'} className="h-4 w-4" />
         </span> : null}
       </span>
       <span className="typography-ui-label font-semibold lowercase text-foreground">
